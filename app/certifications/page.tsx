@@ -1,7 +1,7 @@
 
 import Navbar from '../components/navbar/Navbar';
 
-export default function CodingProjects() {
+export default function Certifications() {
   return (
     <>
     <div className="grid grid-cols-12">
