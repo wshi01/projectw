@@ -6,7 +6,7 @@ const Navbar = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
 
   return (
-    <nav className='fixed top-0 left-0 h-full w-2/12 bg-gray-800'>
+    <nav className='fixed top-0 left-0 h-full w-1/5 bg-gray-800'>
       <div className='grid grid-rows-12 h-full gap-5'>
         <div
           className={`row-span-1 row-start-2 flex justify-start pl-10 ${
@@ -54,6 +54,18 @@ const Navbar = () => {
         >
           <Link href='/certifications'>
             <p className='text-white'>Certifications</p>
+          </Link>
+        </div>
+        <div
+          className={`row-span-1 row-start-6 flex justify-start pl-10 ${
+            hoveredLink === 'experience' ? 'text-lg font-bold transition-all duration-300 shadow-white' : ''
+          }`}
+          //@ts-ignore
+          onMouseEnter={() => setHoveredLink('experience')}
+          onMouseLeave={() => setHoveredLink(null)}
+        >
+          <Link href='/experience'>
+            <p className='text-white'>Experience</p>
           </Link>
         </div>
       </div>
