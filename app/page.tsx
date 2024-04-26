@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image'
 import Navbar from './components/navbar/Navbar';
-import placeHolderImage from '../files/data/images/cat_image.jpg'
 import profileAI from '../files/data/images/profile.jpg'
 
 export default function Home() {
