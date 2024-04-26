@@ -1,17 +1,12 @@
-import Link from 'next/link';
 import Image from 'next/image'
 import Navbar from './components/navbar/Navbar';
-import profileAI from '../files/data/images/profile.jpg'
+import profileAI from '../files/data/images/profile_image.jpg'
 
 export default function Home() {
   const today = new Date();
-
-  // Extract year, month, and day
   const year = today.getFullYear();
-  const month = today.getMonth() + 1; // Months are zero-based
+  const month = today.getMonth() + 1;
   const day = today.getDate();
-
-  // Format the date as needed
   const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
 
   return (
@@ -32,12 +27,8 @@ export default function Home() {
           <div>
             <p>About me</p>
             <p className="text-lg">I am a Software Engineer and Data Analyst in training.</p>
-            
           </div>
-
-        
         </div>
-        
       </div>
     </div>
     </>
