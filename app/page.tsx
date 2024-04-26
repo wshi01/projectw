@@ -2,19 +2,43 @@ import Link from 'next/link';
 import Image from 'next/image'
 import Navbar from './components/navbar/Navbar';
 import placeHolderImage from '../files/data/images/cat_image.jpg'
+import profileAI from '../files/data/images/profile.jpg'
 
 export default function Home() {
+  const today = new Date();
+
+  // Extract year, month, and day
+  const year = today.getFullYear();
+  const month = today.getMonth() + 1; // Months are zero-based
+  const day = today.getDate();
+
+  // Format the date as needed
+  const formattedDate = `${year}-${month < 10 ? '0' + month : month}-${day < 10 ? '0' + day : day}`;
+
   return (
     <>
     <div className="grid grid-cols-5">
       <div className="col-span-1 h-screen">
         <Navbar />
       </div>
-      <div className="pt-10 col-start-2 col-span-4 pl-10 flex flex-1 flex-col justify-start">
-        <Image src={placeHolderImage} alt="Cat Image" className="h-50 mb-4" />
+      <div className="col-start-2 col-span-4 pl-10 flex flex-col ">
+        <br/>
+        <br/>
+        <div className='grid grid-cols-3 m-10'>
+          <div>
+            <p className="pt-10 text-lg origin-bottom-left">Willie Shi</p>
+            <Image src={profileAI} alt="AI" className=" h-auto mb-4" />
+            <p className="pl-11 text-lg transform -rotate-90 origin-bottom-left">{formattedDate}</p>
+          </div>
+          <div>
+            <p>About me</p>
+            <p className="text-lg">I am a Software Engineer and Data Analyst in training.</p>
+            
+          </div>
 
-        <p className="text-xl">Willie Shi</p>
-        <p className="text-l">I am a Software Engineer and Data Analyst in training.</p>
+        
+        </div>
+        
       </div>
     </div>
     </>
