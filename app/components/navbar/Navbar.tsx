@@ -12,7 +12,7 @@ const Navbar = () => {
   const [hoveredLink, setHoveredLink] = useState(null);
   
   return (
-    <nav className='fixed top-0 left-0 h-full w-1/5 bg-gray-900'>
+    <nav className='fixed left-0 h-full w-1/5 bg-gray-900'>
       
       <div className='grid grid-rows-12 h-full gap-5'>
         <div
